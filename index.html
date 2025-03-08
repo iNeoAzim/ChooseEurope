@@ -1,9 +1,61 @@
-<!DOCTYPE html><!-- Google Tag Manager --><html class="no-js" lang="en"><head><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5ZJBJP5X');</script>
-<!-- End Google Tag Manager -->
+  <!-- End Google Tag Manager -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Navigation menu functionality
+        const burgerContainer = document.getElementById('burger-container');
+        const closeModal = document.getElementById('close-modal');
+        const rayonsWrapper = document.getElementById('rayons-wrapper-block');
+        const underlined = document.getElementById('underlined');
+
+        if (burgerContainer) {
+            burgerContainer.addEventListener('click', () => {
+                if (rayonsWrapper) {
+                    rayonsWrapper.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+                if (underlined) {
+                    underlined.style.textDecoration = 'none';
+                    underlined.style.fontWeight = 'bold';
+                }
+            });
+        }
+
+        if (closeModal) {
+            closeModal.addEventListener('click', () => {
+                if (rayonsWrapper) {
+                    rayonsWrapper.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Language detection and text update
+        if (window.location.href.includes('rket.ca/en')) {
+            const rayonEnEl = document.querySelector('.rayons-ind');
+            if (rayonEnEl) {
+                rayonEnEl.textContent = 'Aisles';
+            }
+        }
+
+        // Handle logged in user
+        if (window.ShopifyAnalytics && window.ShopifyAnalytics.meta.customerId) {
+            const loggedInEl = document.getElementById('logged-in');
+            if (loggedInEl) {
+                loggedInEl.textContent = '';
+                loggedInEl.href = 'https://euro-market.ca/account';
+            }
+        }
+    });
+  </script>
 
 <!-- Hotjar Tracking Code for https://euro-market.ca/ -->
 <script>
@@ -45,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="canonical" href="https://euro-market.ca/en" canonical-shop-url="https://euro-market.ca/"><link rel="shortcut icon" href="images/logo_euromarket_hd_1_32x32.png" type="image/png"><link rel="preconnect" href="https://cdn.shopify.com" crossorigin="">
         <title>
             Euro-Market - Montreal delicatessen buy European products
-</title>
+<title>Euro-Market - Montreal delicatessen buy European products</title>
         
             <meta name="description" content="Euro-Market offers you an assortment of grocery products from the most famous French brands available in Canada at low prices! Discover our offers!">
         
@@ -675,10 +727,14 @@ window.ShopifyPay.apiHost = "shop.app\/pay";</script>
         --product-marquee-line-height: calc(var(--product-marquee-text-mobile-size) * 1.5);
     }
 </style>
-        <link href="css/base.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/base-banner-animation.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/component-card-banner-animation.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/custom.css" rel="stylesheet" type="text/css" media="all">
+        <!-- Add this line in the <head> section, before your other CSS files -->
+<link rel="stylesheet" href="css/fixed-styles.css">
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/fixed-styles.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/base-banner-animation.css">
+<link rel="stylesheet" href="css/component-card-banner-animation.css">
+<link rel="stylesheet" href="css/custom.css">
 <link href="css/animated.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/component-card.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/component-loading-overlay.css" rel="stylesheet" type="text/css" media="all">
