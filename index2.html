@@ -1,10 +1,44 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index site final Original</title>
+    <title>Site de Vente Moderne</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script src="./JS/Script.js"></script>
 </head>
 <body>
-    <!-- Ici je vais mettre le code html et tout pour les choses utile comme le slide anime -->
+    <nav>
+        <div class="logo">ChooseEurope</div>
+        <div class="menu">
+            <a href="index.html">Accueil</a>
+            <a href="produits.html">Produits</a>
+            <a href="contact.html">Contact</a>
+            <a href="panier.html" id="voir-panier">🛒 Panier (<span id="cart-count">0</span>)</a>
+        </div>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+    
+    <header class="banner">Bienvenue sur ChooseEurope - Votre marché européen</header>
+    
+    <section class="products">
+        <div class="product">
+            <img src="produit1.jpg" alt="Produit 1">
+            <h3>Produit 1</h3>
+            <p>20€</p>
+            <button onclick="ajouterAuPanier('Produit 1', 20)">Acheter</button>
+        </div>
+        <div class="product">
+            <img src="produit2.jpg" alt="Produit 2">
+            <h3>Produit 2</h3>
+            <p>30€</p>
+            <button onclick="ajouterAuPanier('Produit 2', 30)">Acheter</button>
+        </div>
+    </section>
+    
+    <footer>
+        &copy; 2025 ChooseEurope - Tous droits réservés 
+    </footer>
+    
 </body>
 </html>
