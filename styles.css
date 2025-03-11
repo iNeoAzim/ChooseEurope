@@ -1,0 +1,72 @@
+:root {
+    --primary-color: #0057B7;
+    --accent-color: #FFD700;
+    --background-light: #FFFFFF;
+    --background-dark: #1E1E1E;
+    --text-light: #000000;
+    --text-dark: #FFFFFF;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background-light);
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.banner {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 1.5em;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product button {
+    background: var(--accent-color);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.product button:hover {
+    background: #E6C300;
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+.dark-mode {
+    background: var(--background-dark);
+    color: var(--text-dark);
+}
